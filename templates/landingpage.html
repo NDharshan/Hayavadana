@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Hayavadana</title>
+<!--    <link rel="stylesheet" href="./assets/css/style.css">-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 150;
+            text-decoration: none;
+            list-style: none;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 1rem;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        label.logo{
+            line-height: 32px;
+            font-size: 26px;
+            padding: 32px 50px;
+            font-weight: bold;
+        }
+
+        label span{
+            font-weight: bold;
+            color: #7ec8b2;
+        }
+
+        nav{
+            display: flex;
+            width: 100%;
+            line-height: 80px;
+            padding: 5px 0;
+        }
+
+        nav ul{
+            text-align: right;
+            padding-right: 30px;
+            margin-left: 500px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            margin: 3px 15px;
+        }
+
+        nav ul li a{
+            color:#000000;
+            position: relative;
+            padding: 10px 0px;
+        }
+
+        nav ul li button{
+            background: #7ec8b2;
+            border-radius: 5px;
+            border-style: none;
+            width: 90px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        nav ul li button a{
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        section{
+            padding: 0 90px;
+        }
+
+        .landingpg .rowcon{
+            display: flex;
+        }
+
+        .landingpg .rowcon .img{
+            float: right;
+        }
+
+        .landingpg .rowcon .img img{
+            width: 500px;
+            height: 400px;
+            padding-right: 30px;
+        }
+
+        .landingpg .rowcon .content{
+            float: left;
+            padding-top: 75px;
+        }
+
+        .landingpg .rowcon .content span{
+            font-weight: 600;
+            padding-left: 10px;
+        }
+
+        .landingpg .rowcon .content h2{
+            color: #7ec8b2;
+            font-size: 40px;
+        }
+
+        .landingpg .rowcon .content p{
+            padding-right: 8rem;
+            font-size: 20px;
+        }
+
+        .landingpg .rowcon .content button{
+            margin-top: 20px;
+            width: 150px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .landingpg .rowcon .content button a{
+            font-size: 20px;
+        }
+
+        /*I have to revisit the shadow effect*/
+        .landingpg .rowcon .content #enr{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 5px #7ec8b2;
+        }
+
+        .landingpg .rowcon .content #enrl{
+            color: white;
+        }
+
+        .landingpg .rowcon .content #ex{
+            background-color: white;
+            border: 1px solid #7ec8b2;
+            margin-left: 20px;
+        }
+
+        .landingpg .rowcon .content #exp{
+            color: #7ec8b2;
+        }
+
+        .orientation h2{
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .orientation h2 #stories{
+            font-weight: 800;
+            font-size: 30px;
+            background-color:rgb(231, 231, 231);
+        }
+
+        .orientation h2 sub{
+            font-size: 12px;
+        }
+
+        .orientation .orie{
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .orientation .orie .orie-img{
+            float: left;
+        }
+
+        .orientation .orie .orie-img img{
+            width: 500px;
+            margin-right: 1px;
+        }
+
+        .orie-img{
+            position: relative;
+        }
+
+        .numberone{
+            position: absolute;
+            top: 15px;
+            right: 16px;
+            color: white;
+        }
+
+        .datesep{
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            color: #fff;
+        }
+
+        .orientation .orie .cont-story{
+            float: right;
+            padding-left: 100px;
+            padding-top: 50px;
+        }
+
+        .orientation .orie .cont-story h2{
+            font-weight: 800;
+        }
+
+        .orientation .orie .cont-story p{
+            font-size: 25px;
+            font-weight: 500;
+            padding-top: 30px;
+        }
+
+        .orientation .orie .cont-story button{
+            margin-top: 30px;
+            width: 150px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .orientation .orie .cont-story button a{
+            font-size: 20px;
+        }
+
+        .orientation .orie .cont-story #see-al{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .orientation .orie .cont-story #see-alb{
+            color: white;
+        }
+
+        .board .bord{
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .board .bord .conte-story{
+            float: left;
+            padding-right: 100px;
+            padding-top: 50px;
+        }
+
+        .board .bord .conte-story h2{
+            font-weight: 800;
+        }
+
+        .board .bord .conte-story p{
+            font-size: 25px;
+            font-weight: 500;
+            padding-top: 30px;
+        }
+
+        .board .bord .conte-story button{
+            margin-top: 30px;
+            width: 180px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .board .bord .conte-story button a{
+            font-size: 20px;
+        }
+
+        .board .bord .conte-story #read-out{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .board .bord .conte-story #read{
+            color: white;
+        }
+
+        .board .bord .board-img{
+            float: right;
+        }
+
+        .board .bord .board-img img{
+            width: 500px;
+            margin-right: 1px;
+        }
+
+        .board-img{
+            position: relative;
+        }
+
+        .numbertwo{
+            position: absolute;
+            top: 15px;
+            left: 16px;
+            color: white;
+        }
+
+        .dateoct{
+            position: absolute;
+            bottom: 15px;
+            right: 16px;
+            color: #fff;
+        }
+
+        .graduation .gradua{
+            display: flex;
+            padding-top: 50px;
+        }
+
+        .graduation .gradua .grad-img{
+            float: left;
+        }
+
+        .graduation .gradua .grad-img img{
+            width: 500px;
+            margin-right: 1px;
+        }
+
+        .grad-img{
+            position: relative;
+        }
+
+        .numberthree{
+            position: absolute;
+            top: 15px;
+            right: 16px;
+            color: white;
+        }
+
+        .datejune{
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            color: #fff;
+        }
+
+        .graduation .gradua .conten-story{
+            float: right;
+            padding-left: 100px;
+            padding-top: 50px;
+        }
+
+        .graduation .gradua .conten-story h2{
+            font-weight: 800;
+        }
+
+        .graduation .gradua .conten-story p{
+            font-size: 25px;
+            font-weight: 500;
+            padding-top: 30px;
+        }
+
+        .graduation .gradua .conten-story button{
+            margin-top: 30px;
+            width: 150px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .graduation .gradua .conten-story button a{
+            font-size: 20px;
+        }
+
+        .graduation .gradua .conten-story #see-all{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .graduation .gradua .conten-story #see-albu{
+            color: white;
+        }
+
+        .techmentor{
+            padding-top: 50px;
+        }
+
+        .techmentor h2{
+            font-weight: 800;
+            font-size: 30px;
+        }
+
+        .techmentor h2 #span-story{
+            font-weight: 800;
+            font-size: 30px;
+            background-color:rgb(231, 231, 231);
+        }
+
+        .techmentor h2 span{
+            font-weight: 800
+        }
+        .techmentor h2 sup{
+            font-size: 12px;
+            padding-left: 10px;
+        }
+
+        .techmentor .techm{
+            display: flex;
+            padding-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techrose{
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techrose .imgrose img{
+            width: 250px;
+        }
+
+        .imgrose{
+            position: relative;
+        }
+
+        .rose{
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .techmentor .techm .techrose .content-techrose{
+            padding-left: 10px;
+        }
+
+        .techmentor .techm .techrose .content-techrose h3{
+            color: #7ec8b2;
+            font-weight: 800;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .techmentor .techm .techrose .content-techrose p{
+            padding-bottom: 10px;
+            font-size: 14px;
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techrose .content-techrose button{
+            width: 130px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .techmentor .techm .techrose .content-techrose button a{
+            font-size: 14px;
+        }
+
+        .techmentor .techm .techrose .content-techrose #as{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .techmentor .techm .content-techrose #ask{
+            color: white;
+        }
+
+        .techmentor .techm .techalbo{
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techalbo .imgalbo img{
+            width: 250px;
+        }
+
+        .imgalbo{
+            position: relative;
+        }
+
+        .albert{
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo{
+            padding-left: 10px;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo h3{
+            color: #7ec8b2;
+            font-weight: 800;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo p{
+            padding-bottom: 10px;
+            font-size: 14px;
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo button{
+            width: 130px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo button a{
+            font-size: 14px;
+        }
+
+        .techmentor .techm .techalbo .content-techalbo #askk{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .techmentor .techm .content-techalbo #aski{
+            color: white;
+        }
+
+
+        .techmentor .techm .techrapho{
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techrapho .imgrapho img{
+            width: 250px;
+        }
+
+        .imgrapho{
+            position: relative;
+        }
+
+        .raphael{
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho{
+            padding-left: 10px;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho h3{
+            color: #7ec8b2;
+            font-weight: 800;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho p{
+            padding-bottom: 10px;
+            font-size: 14px;
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho button{
+            width: 130px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho button a{
+            font-size: 14px;
+        }
+
+        .techmentor .techm .techrapho .content-techrapho #asky{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .techmentor .techm .content-techrapho #askie{
+            color: white;
+        }
+
+        .techmentor .techm .techtia{
+            padding-right: 20px;
+        }
+
+        .techmentor .techm .techtia .imgtia img{
+            width: 250px;
+        }
+
+        .imgtia{
+            position: relative;
+        }
+
+        .christine{
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .techmentor .techm .techtia .content-techtia{
+            padding-left: 10px;
+        }
+
+        .techmentor .techm .techtia .content-techtia h3{
+            color: #7ec8b2;
+            font-weight: 800;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .techmentor .techm .techtia .content-techtia p{
+            padding-bottom: 10px;
+            font-size: 14px;
+            padding-right: 30px;
+        }
+
+        .techmentor .techm .techtia .content-techtia button{
+            width: 130px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .techmentor .techm .techtia .content-techtia button a{
+            font-size: 14px;
+        }
+
+        .techmentor .techm .techtia .content-techtia #aska{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .techmentor .techm .content-techtia #askia{
+            color: white;
+        }
+
+        .project h2{
+            font-weight: 800;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+
+        .project h2 #back{
+            font-weight: 800;
+            font-size: 30px;
+            background-color:rgb(231, 231, 231);
+        }
+
+        .project h2 #norm-text{
+            font-size: 12px;
+            padding-left: 10px;
+        }
+
+        .project .projo{
+            display: flex;
+            padding-top: 90px;
+        }
+
+        .project .projo .contt-img{
+            float: right;
+        }
+
+        .project .projo .contt-img img{
+            width: 650px;
+            height: 325px;
+            padding-right: 30px;
+        }
+
+        .project .projo .contt-projo{
+            float: left;
+            padding-top: 20px;
+        }
+
+        .project .projo .contt-projo span{
+            font-weight: 600;
+        }
+
+        .project .projo .contt-projo h2{
+            color: #7ec8b2;
+            font-size: 40px;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+
+        .project .projo .contt-projo p{
+            padding-top: 20px;
+            padding-right: 3rem;
+            font-size: 16px;
+        }
+
+        .project .projo .contt-projo button{
+            margin-top: 25px;
+            width: 150px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .project .projo .contt-projo button a{
+            font-size: 20px;
+        }
+
+        .project .projo .contt-projo #lear{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .project .projo .contt-projo #learn{
+            color: white;
+        }
+
+        .decision{
+            padding-top: 70px;
+        }
+
+        .decision h3{
+            font-size: 30px;
+            color: #7ec8b2;
+            /* padding-bottom: 1px; */
+        }
+
+        .decision p{
+            font-size: 25px;
+            padding-bottom: 30px;
+        }
+
+        .decision p button{
+            margin-top: 25px;
+            width: 90px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .decision p button a{
+            font-size: 19px;
+        }
+
+        .decision p #btn-enr{
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .decision p #a-enr{
+            color: white;
+        }
+
+        .decision p span{
+            font-size: 19px;
+            padding-left: 10px;
+        }
+
+        .decision p #contact{
+            font-size: 19px;
+            color: #7ec8b2;
+        }
+
+        footer{
+            padding: 50px;
+            background-color: aliceblue;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+    </head>
+    <body>
+        <nav>
+            <label class="logo"><span>Hayavadana</span> GAT College Hostel</label>
+            <ul>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Our Projects</a></li>
+                <li><a href="#">Stories</a></li>
+            </ul>
+        </nav>
+
+        <section class="landingpg">
+            <div class="rowcon">
+                <div class="content">
+                    <span>About us in a few words</span>
+                    <h2>Hostel</h2>
+                    <p>Global Academy of Technology has a very well-equipped hostel facility for both boys and girls. The building is an elegantly designed eight storied Hostel Building near the college premise to ensure that the students dwell in a healthy environment that helps them to grow and learn without any obstacle.</p>
+                </div>
+
+                <div class="img">
+                    <img src= "{{ url_for('static', filename='IMG_20220715_141920 - Sanjeev Gosai.jpg') }}" alt="">
+                </div>
+            </div>
+        </section>
+
+
+            <section class="orientation">
+                <h2 class="h-stories"><span id="stories">Stori</span>es <sub>So many memories!</sub></h2>
+                <div class="orie">
+                    <div class="orie-img">
+                        <p class="numberone">#1</h3>
+                        <h3 class="datesep">@23 September, 2021.</h3>
+                        <img src= "{{ url_for('static', filename='Room photo.jpg') }}" alt="">
+                    </div>
+                    <div class="cont-story">
+                        <h2>Emenities here</h2>
+                        <p>
+                            There are single, double, and four sharing rooms
+                            <br>Each room is equipped with basic furniture like cot, chair, table, cupboard for individual student with common tube light and fan.
+                            <br>Wi-Fi enabled facility.
+                            <br>Each floor in the hostel has separate arrangement for RO drinking water facility with in- house RO plant.
+                            <br>Well maintained dining Hall with TV and clean kitchen (which provides nutritious & healthy vegetarian & non-vegetarian food of student’s choice).
+                            <br>24 hrs hot water facility through the solar panels.
+                            <br>Each floor in the Hostel is equipped with CCTV cameras to keep a strict vigil and a security guard for 24 hours.
+                            <br>24 Power Supply.
+                            <br>Guest House and parking facility.
+                        </p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="board">
+                <div class="bord">
+                    <div class="conte-story">
+                        <h2>Board meeting</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est purus, consectetur sit frin bot.</p>
+                        <button id="read-out"><a href="#" id="read">Read out stories</a></button>
+                    </div>
+                    <div class="board-img">
+                        <img src="./assets/images/image 3.png" alt="">
+                        <p class="numbertwo">#2</p>
+                        <p class="dateoct">@31 October, 2021.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="graduation">
+                <div class="gradua">
+                    <div class="grad-img">
+                        <img src="./assets/images/image 4.png" alt="">
+                        <div class="numberthree">#3</div>
+                        <div class="datejune">@10 June, 2021.</div>
+                    </div>
+                    <div class="conten-story">
+                        <h2>Graduation Party.</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam est purus, consectetur sit frin bot.</p>
+                        <button id="see-all"><a href="#" id="see-albu">See Album</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="techmentor">
+                <h2 class="hd-stories"><span id="span-story">Tech</span>nical Mentors<sup>Skilled, and kind!</sup></h2>
+                <div class="techm">
+
+                <div class="techrose">
+                    <div class="imgrose">
+                        <img src="./assets/images/image 5.png" alt="">
+                        <p class="rose">Rose Oketch</p>
+                    </div>
+
+                    <div class="content-techrose">
+                        <h3>Web development</h3>
+                        <p>Lorem ipsum dolor sit amedgt, consectetur adipiscing elit. Nm est purus, consectetur sit amet odio sed, umcorper aliquet tortor.</p>
+                        <button id="as"><a href="#" id="ask">Ask A Question</a></button>
+                    </div>
+                </div>
+
+                <div class="techalbo">
+                    <div class="imgalbo">
+                        <img src="./assets/images/image 6.png" alt="">
+                        <p class="albert">Albert Byrone</p>
+                    </div>
+                    <div class="content-techalbo">
+                        <h3>Web development</h3>
+                        <p>Lorem ipsum dolor sit amedgt, consectetur adipiscing elit. Nm est purus, consectetur sit amet odio sed, umcorper aliquet tortor.</p>
+                        <button id="askk"><a href="#" id="aski">Ask A Question</a></button>
+                    </div>
+                </div>
+
+                <div class="techrapho">
+                    <div class="imgrapho">
+                        <img src="./assets/images/image 7.png" alt="">
+                        <p class="raphael">Raphael Katana</p>
+                    </div>
+                    <div class="content-techrapho">
+                        <h3>Web development</h3>
+                        <p>Lorem ipsum dolor sit amedgt, consectetur adipiscing elit. Nm est purus, consectetur sit amet odio sed, umcorper aliquet tortor.</p>
+                        <button id="asky"><a href="#" id="askie">Ask A Question</a></button>
+                    </div>
+                </div>
+
+                <div class="techtia">
+                    <div class="imgtia">
+                        <img src="./assets/images/image 8.png" alt="">
+                        <p class="christine">Christine Karimi</p>
+                    </div>
+                    <div class="content-techtia">
+                        <h3>Android development</h3>
+                        <p>Lorem ipsum dolor sit amedgt, consectetur adipiscing elit. Nm est purus, consectetur sit amet odio sed, umcorper aliquet tortor.</p>
+                        <button id="aska"><a href="#" id="askia">Ask A Question</a></button>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+
+        <br>
+
+        <div class="container right-panel-active" >
+             <style>
+                  :root {
+                    /* COLORS */
+                    --white: #e9e9e9;
+                    --gray: #333;
+                    --blue: #0367a6;
+                    --lightblue: #008997;
+
+                    /* RADII */
+                    --button-radius: 0.7rem;
+
+                    /* SIZES */
+                    --max-width: 900px;
+                    --max-height: 800px;
+
+                    font-size: 19px;
+                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                }
+
+
+                .form__title {
+                    font-weight: 300;
+                    margin: 0;
+                    margin-bottom: 1.25rem;
+                }
+
+                .link {
+                    color: var(--gray);
+                    font-size: 0.9rem;
+                    margin: 1.5rem 0;
+                    text-decoration: none;
+                }
+
+                .container {
+                    background-color: var(--white);
+                    border-radius: var(--button-radius);
+                    box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
+                        0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
+                    height: var(--max-height);
+                    max-width: var(--max-width);
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                }
+
+                .container__form {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    transition: all 0.6s ease-in-out;
+                }
+
+                .container--signin {
+                    left: 0;
+                    width: 50%;
+                    z-index: 2;
+                }
+
+                .container.right-panel-active .container--signin {
+                    transform: translateX(100%);
+                }
+
+                .container--signup {
+                    left: 0;
+                    opacity: 0;
+                    width: 50%;
+                    z-index: 1;
+                }
+
+                .container.right-panel-active .container--signup {
+                    animation: show 0.6s;
+                    opacity: 1;
+                    transform: translateX(100%);
+                    z-index: 5;
+                }
+
+                .container__overlay {
+                    height: 100%;
+                    left: 50%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    transition: transform 0.6s ease-in-out;
+                    width: 50%;
+                    z-index: 100;
+                }
+
+                .container.right-panel-active .container__overlay {
+                    transform: translateX(-100%);
+                }
+
+                .overlay {
+                    background-color: var(--lightblue);
+                    background: url("https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg");
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    left: -120%;
+                    position: relative;
+                    transform: translateX(0);
+                    transition: transform 0.6s ease-in-out;
+                    width: 200%;
+                }
+
+                .container.right-panel-active .overlay {
+                    transform: translateX(50%);
+                }
+
+                .overlay__panel {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: center;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    transform: translateX(0);
+                    transition: transform 0.6s ease-in-out;
+                    width: 50%;
+                }
+
+                .overlay--left {
+                    transform: translateX(-20%);
+                }
+
+                .container.right-panel-active .overlay--left {
+                    transform: translateX(0);
+                }
+
+                .overlay--right {
+                    right: 0;
+                    transform: translateX(0);
+                }
+
+                .container.right-panel-active .overlay--right {
+                    transform: translateX(20%);
+                }
+
+                .btn {
+                    background-color: var(--blue);
+                    background-image: linear-gradient(90deg, var(--blue) 0%, var(--lightblue) 74%);
+                    border-radius: 20px;
+                    border: 1px solid var(--blue);
+                    color: var(--white);
+                    cursor: pointer;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    padding: 0.9rem 4rem;
+                    text-transform: uppercase;
+                    transition: transform 80ms ease-in;
+                }
+
+                .form > .btn {
+                    margin-top: 1.5rem;
+                }
+
+                .btn:active {
+                    transform: scale(0.95);
+                }
+
+                .btn:focus {
+                    outline: none;
+                }
+
+                .form {
+                    background-color: var(--white);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 0 3rem;
+                    height: 100%;
+                    text-align: center;
+                }
+
+                .input {
+                    background-color: #fff;
+                    border: none;
+                    padding: 0.9rem 0.9rem;
+                    margin: 0.5rem 0;
+                    width: 100%;
+                }
+
+                @keyframes show {
+                    0%,
+                    49.99% {
+                        opacity: 0;
+                        z-index: 1;
+                    }
+
+                    50%,
+                    100% {
+                        opacity: 1;
+                        z-index: 5;
+                    }
+                }
+             </style>
+
+            <!-- Sign Up -->
+            <div class="container__form container--signup">
+                <form  action = "/saverecord" method="post" class="input" id="form1">
+                    <div class="form-row">
+                        <div >
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" name="name" placeholder="Name">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div >
+                          <label for="usn">USN</label>
+                          <input type="text" class="form-control" name="usn" placeholder="USN">
+                        </div>
+                        <div >
+                          <label for="branch">Branch</label>
+                          <input type="text" class="form-control" name="branch" placeholder="Branch">
+                        </div>
+
+                        <div >
+                          <label for="semester">Semester</label>
+                          <input type="text" class="form-control" name="semester" placeholder="Semester">
+                        </div>
+
+                        <div >
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" placeholder="City">
+                        </div>
+                    </div>
+
+                    <br><h5>For existing students</h5>
+
+                    <div >
+                          <label for="floor_number">Floor number</label>
+                          <input type="text" class="form-control" name="floor_number" placeholder="Floor Number">
+                    </div>
+
+                    <div >
+                          <label for="room_number">Room number</label>
+                          <input type="text" class="form-control" name="room_number" placeholder="Room Number">
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <br>
+                </form>
+            </div>
+
+            <!-- Overlay -->
+            <div class="container__overlay">
+                <div class="overlay">
+                    <div class="overlay__panel overlay--right">
+                        <button class="btn" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <section class="project">
+                <h2 class="hdd-stories"><span id="back">What's</span>  new here? <span id="norm-text">It's, hopefully, a good one.</span></h2>
+
+                <div class="projo">
+                    <div class="contt-projo">
+                        <span>This is how we maintain our</span>
+                        <h2>Log</h2>
+                        <p>We maintain an image processing, driven log, which on scanning your ID Card can automatically fill in the log without the hazzale of maintaing a log, writing and other tedious chores</p>
+                        <button id="lear"><a href="#" id="learn">Enter Log</a></button>
+                    </div>
+                    <div class="contt-img">
+                        <img src="./assets/images/image 9.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="decision">
+                <h3><strong>Still not sure?</strong></h3>
+                <p>Go ahead and <button id="btn-enr"><a href="#" id="a-enr">Enroll</a></button><span>or <a href="#" id="contact">contact us</a></span>.</p>
+            </section>
+
+</body>
+</html>
+
