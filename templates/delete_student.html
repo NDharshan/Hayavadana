@@ -5,7 +5,7 @@
 
  <style>
      body{
-    background-image: url('/static/3.jpg');
+    background-image: url('/static/delete-cover.jpg');
     background-size: cover;
     text-align: center;
     font-size: 30px;
@@ -35,6 +35,14 @@
    input[type=submit]:hover {
     background-color: #45a049;
    }
+ body {
+  margin-top: 124px;
+  margin-left: 32px;
+}
+body > h1:nth-child(1) {
+ color: #4c56af;
+ font-size: 50px
+}
 
  </style>
 
@@ -42,7 +50,7 @@
  <body>
    <h1 style="color: #4CAF50; font-size: 50px">Remove Student from the list</h1>
  <form action="/deleterecord" method="post">
- Student USN <input type="text" name="usn">
+ <input type="text" name="usn" placeholder="USN">
 
  <input type="submit" value="Submit">
  </form>

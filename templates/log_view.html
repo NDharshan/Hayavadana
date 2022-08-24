@@ -9,12 +9,18 @@
 
       <style>
           body{
-           background-image: url('{{ url_for('static', filename='books.jpeg') }}');
+           background-image: url('{{ url_for('static', filename='2.jpg') }}');
            background-size: cover;
            text-align: center;
            font-weight: bold;
            font-size: larger;
           }
+
+          body {
+ margin-top:32px;
+}
+
+
       </style>
 
       </head>
@@ -23,9 +29,8 @@
            <table align="center" class="table" cellspacing = "2" cellpadding = "13" border = "10" width="700" >
                   <thead>
                        <td scope="col" >USN</td>
-                       <td scope="col" >Name</td>
-                       <td scope="col" >Floor Number</td>
-                       <td scope="col" >Room Number</td>
+                       <td scope="col" >Log Entry- Out</td>
+                       <td scope="col" >Log Entry- In</td>
                   </thead>
 
                   {% for row in rows %}
@@ -33,7 +38,6 @@
                       <td scope="row" >{{row[0]}}</td>
                       <td scope="row" >{{row[1]}}</td>
                       <td scope="row" >{{row[2]}}</td>
-                      <td scope="row" >{{row[3]}}</td>
                   </tr>
                   {% endfor %}
 
@@ -41,7 +45,7 @@
            <br><br>
            <a href="/">Go back to home page</a>
       </body>
- </html> 
+ </html>
 
 
 <!--
