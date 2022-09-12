@@ -15,6 +15,22 @@
            font-weight: bold;
            font-size: larger;
           }
+          .form-control {
+            width: 26%;
+          }
+
+        nav ul li a{
+            color:#000000;
+            position: relative;
+            padding: 10px 0px;
+            text-decoration: none;
+        }
+        #update {
+            background-color: #7ec8b2;
+            border-radius: 5px;
+            border: none;
+            color: white;
+        }
       </style>
 
       </head>
@@ -38,7 +54,19 @@
                   {% endfor %}
 
            </table>
-           <br><br>
+           <br>
+           <h2>
+               Update Floor and Room
+               <div style="margin-left: 600px;">
+                   <br>
+                  <input type="text" class="form-control" name="usn" placeholder="USN">
+                  <input type="text" class="form-control" name="floor" placeholder="Floor">
+                  <input type="email" class="form-control" name="room" placeholder="Room">
+                   <br>
+               </div>
+               <button id="update" ><a href="/update" id="update" style="text-decoration: none">Update</a></button>
+           </h2>
+           <br>
            <a href="/">Go back to home page</a>
       </body>
  </html> 
@@ -80,6 +108,7 @@
  </tr>
  {% endfor %}
  </table>
+
 
 
 <styles>
